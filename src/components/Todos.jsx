@@ -1,3 +1,5 @@
+ 
+
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import {removeTodo} from '../Features/Todo/todoSlice'
@@ -18,6 +20,7 @@ function Todos() {
             <div className='text-white'>{todo.text}</div>
             <button
              onClick={() => dispatch(removeTodo(todo.id))}
+             //when we pass parameter we use callback because  we dont use {} it applied immedietly.we want to work with button after click so that by we used ()
               className="text-white bg-red-500 border-0 py-1 px-4 focus:outline-none hover:bg-red-600 rounded text-md"
             >
               <svg

@@ -1,12 +1,14 @@
+// usedispatch is used for change in the store with use of reducers
+
 import React, {useState} from 'react'
 import {useDispatch} from 'react-redux'
 import {addTodo} from '../Features/Todo/todoSlice' 
 
 function AddTodo() {
-
+  
     const [input, setInput] = useState('')
     const dispatch = useDispatch()
-
+  
     const addTodoHandler = (e) => {
         e.preventDefault()
         dispatch(addTodo(input))
